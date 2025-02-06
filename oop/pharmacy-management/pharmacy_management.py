@@ -30,15 +30,10 @@ class Pharmacy:
         return total_value
 
     def employees_summary(self) -> str:
-        summary = "Employees:\n"
-        for i, emp in enumerate (self.employees):
-            first_name = emp["first_name"]
-            last_name = emp["last_name"]
-            age = emp["age"]
-            
-            summary += f"The employee number {i} is {first_name} {last_name} who is {age} years old.\n"
-        
-        return summary
+        output = 'Employees:\n'
+        for i, employee in enumerate(self.employees):
+            output += f"The employee number {i + 1} is {employee['first_name']} {employee['last_name']} who is {employee['age']} years old.\n"
+        return output
     
 
 drug = Drug(name='drug1', amount=5, price=10)
@@ -54,4 +49,3 @@ pharmacy.add_employee(first_name='Jane', last_name='Doe', age=25)
 
 print(pharmacy.total_value())
 
-#test 2
