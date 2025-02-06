@@ -53,3 +53,5 @@ pharmacy.add_employee(first_name='John', last_name='Doe', age=30)
 pharmacy.add_employee(first_name='Jane', last_name='Doe', age=25)
 
 print(pharmacy.total_value())
+
+#test
