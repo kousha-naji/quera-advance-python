@@ -1,0 +1,17 @@
+from work_place import WorkPlace, Consts
+from math import sqrt, floor
+
+
+class School(WorkPlace):
+    def __init__(self, name):
+        super().__init__(name)
+        self.expertise = "school"
+
+
+    def calc_capacity(self):
+        self.capacity = floor(sqrt(self.level))
+
+
+    def calc_costs(self):
+        self.costs = (Consts.BASE_PLACE_COST + Consts.LEVEL_MUL) * self.level
+        return self.costs
