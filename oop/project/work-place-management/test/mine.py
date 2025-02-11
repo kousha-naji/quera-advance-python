@@ -5,6 +5,7 @@ from math import sqrt, floor
 class Mine(WorkPlace):
     def __init__(self, name):
         super().__init__(name)
+        self.costs = None
         self.expertise = "mine"
 
     def calc_capacity(self):
